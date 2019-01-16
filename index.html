@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>The Game Page</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Personal CSS file -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+		
+		<!-- Bootstrap JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container">
+			<div class="jumbotron leadImage">
+				<h1>Welcome to the Game Page!</h1>
+			</div><!--/Jumbotron-->
+            
+			<!-- Navigation -->
+			
+			<nav class="navbar navbar-inverse">
+				<div class="container-fluid">
+					
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#links" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand active" href="#">Game Page</a>
+					</div>
+			
+					
+					<div class="collapse navbar-collapse" id="links">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="index.html">Home</a></li>
+							<li><a href="history.html">History<span class="sr-only">(current)</span></a></li>
+							<li><a href="contact.html">Contact Us</a></li>
+						</ul>
+					</div>
+			</nav>
+			
+			<div class="row">
+                <div class="col-sm-6">
+                    <h2>RPS Game</h2>
+					<p>Rock-paper-scissors is a zero-sum hand game usually played between two people, in which each player simultaneously forms one of three shapes with an outstretched hand. These shapes are "rock" (a simple fist), "paper" (a flat hand), and "scissors" (a fist with the index and middle fingers together forming a V). The game has only three possible outcomes other than a tie: a player who decides to play rock will beat another player who has chosen scissors ("rock crushes scissors") but will lose to one who has played paper ("paper covers rock"); a play of paper will lose to a play of scissors ("scissors cut paper"). If both players choose the same shape, the game is tied and is usually immediately replayed to break the tie.</p>
+					<p>Give it a try!</p>
+					<label>Type rock, paper or scissors and click the play button:</label><input id ='userInput'><br>
+					<button class="btn btn-primary" onclick = "playRPS()">Click here to play</button>
+					<p id = 'userOutput'></p>
+					<p id = 'computerOutput'></p>
+					<p id = 'rpsOutput'></p>
+                </div> <!--/RPS column-->
+				<div class="col-sm-6">
+					<h2>Dice Game</h2>
+					<p>The rules of this game are simple.  If you roll a 7 or 11, you win.  2, 3 or 12 are losing rolls.  Any other roll and you can try again until you win or lose.</p>
+					<button class="btn btn-primary" onclick = "diceRoll()">Click here to roll</button>
+					<p id = 'diceOutput'></p>
+				</div> <!--/Dice column-->
+            </div> <!--/Row-->               
+        </div> <!--/Container-->
+		<script src = 'rps.js'></script>
+		<script src = 'dice.js'></script>
+    </body>
+</html>
